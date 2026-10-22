@@ -21,9 +21,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_22_110236) do
     t.integer "plot_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cpf"], name: "index_deceaseds_on_cpf", unique: true
     t.index ["plot_id"], name: "index_deceaseds_on_plot_id"
-    t.index ["rg"], name: "index_deceaseds_on_rg", unique: true
   end
 
   create_table "plots", force: :cascade do |t|

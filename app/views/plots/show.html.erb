@@ -8,3 +8,16 @@
 
   <%= button_to "Destroy this plot", @plot, method: :delete %>
 </div>
+
+<div>
+  <h2>Deceaseds</h2>
+  <%= link_to "Add deceased", new_plot_deceased_path(@plot) %>
+
+  <ul>
+    <% @plot.deceaseds.each do |deceased| %>
+      <li>
+        <%= link_to deceased.name, plot_deceased_path(@plot, deceased) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

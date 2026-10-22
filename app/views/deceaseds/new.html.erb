@@ -1,0 +1,32 @@
+<h1>New Deceased</h1>
+
+<%= form_with model: [@plot, @deceased], local: true do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :cpf %>
+    <%= f.text_field :cpf %>
+  </div>
+
+  <div>
+    <%= f.label :rg %>
+    <%= f.text_field :rg %>
+  </div>
+
+  <div>
+    <%= f.label :date_of_birth %>
+    <%= f.date_field :date_of_birth %>
+  </div>
+
+  <div>
+    <%= f.label :date_of_death %>
+    <%= f.date_field :date_of_death %>
+  </div>
+
+  <%= f.submit "Create Deceased" %>
+<% end %>
+
+<%= link_to "Back to plots", @plot %>
