@@ -1,0 +1,2 @@
+class DeceasedsController < ApplicationController
+end
